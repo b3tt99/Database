@@ -15,3 +15,13 @@ class User(Model):
         database = db
 
 User.create_table(fail_silently=True)
+
+class Student(Model):
+    student_name = CharField()
+    student_id = CharField(unique=True)
+    student_class = CharField()
+
+    class Meta:
+        database = db
+
+Student.create_table(fail_silently=True)
