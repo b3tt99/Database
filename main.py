@@ -27,3 +27,18 @@ class Student(Model):
         database = db
 
 Student.create_table(fail_silently=True)
+
+class People(Model):
+    p_name = CharField()
+    p_phone_number = CharField()
+    p_email = CharField()
+    p_county = CharField()
+    p_gender = CharField()
+    p_religion = CharField()
+    p_password = CharField()
+
+    class Meta:
+        database = db
+
+People.create_table(fail_silently=True)
+
